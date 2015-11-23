@@ -93,6 +93,11 @@ Example:
     ./customer_detail.html
 ```
 
+All templates of an app should share a common ancestor or not extend from any
+template at all when possible. An example way of complying would be to make all
+of the `customer_{create,update,detail}.html` templates to inherit from `{%
+extend '{app_name}/base.html' %}`.
+
 ##### URL patterns
 - All apps should use url **namespaces**, the namespace should be identical to the app name.
 - Patterns should be in a separate line than the view and name.
