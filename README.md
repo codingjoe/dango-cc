@@ -70,20 +70,20 @@ setup(
 
 Make sure to put all your development requirements in the `requirements-dev.txt` file.
 
-### [EditorConfig]
-EditorConfig helps developers define and maintain consistent coding styles between different editors and IDEs. [[1]][EditorConfig]
+### EditorConfig
+[EditorConfig] helps developers define and maintain consistent coding styles between different editors and IDEs. [^1][EditorConfig]
 
 EditorConfig enables contributors to align their code with the guideline while writing it.
 
 The example file includes all file types defined in the contribution including the [`isort`](#isort) configuration.
 
-### [isort][isort]
-isort your python imports for you so you don't have to. [[2]][isort]
+### isort
+[isort] your python imports for you so you don't have to. [^2][isort]
 
 isort is configured in the [pre-commit][pre-commit-config.yaml], [`setup.cfg`][setup.cfg] and [`editorconfig`][editorconfig].
 
-### [Flake8][flake8]
-Flake8 is a wrapper around these tools: [[3]][flake8]
+### Flake8
+[Flake8] is a wrapper around these tools: [^3][flake8]
 - [PyFlakes](https://launchpad.net/pyflakes)
 - [pep8](https://github.com/jcrocholl/pep8)
 - Ned Batchelder's [McCabe](http://nedbatchelder.com/blog/200803/python_code_complexity_microtool.html) script
@@ -93,13 +93,13 @@ Additionally the [`setup.cfg`][setup.cfg] file make use of [pep8-naming](https:/
 ### pydocstyle
 [pydocstyle] checks doc strings with their compliance with [PEP 257](https://www.python.org/dev/peps/pep-0257/).
 
-### [pre-commit][pre-commit]
-A framework for managing and maintaining multi-language pre-commit hooks. [[4]][pre-commit]
+### pre-commit
+[pre-commit] is a framework for managing and maintaining multi-language pre-commit hooks. [^4][pre-commit]
 
 [pre-commit]: (http://pre-commit.com/)
 [editorconfig]: examples/.editorconfig
-[isort]: (https://github.com/timothycrosley/isort)
-[flake8]: (https://flake8.readthedocs.org/en/latest/)
+[isort]: https://github.com/timothycrosley/isort
+[flake8]: https://flake8.readthedocs.org/en/latest/
 [pydocstyle]: https://pydocstyle.readthedocs.org/
 [setup.cfg]: examples/setup.cfg
 [pre-commit-config.yaml]: examples/.pre-commit-config.yaml
