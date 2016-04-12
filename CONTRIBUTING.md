@@ -12,6 +12,7 @@
   5. [Forms](#Forms)
   6. [Templates](#Templates)
   7. [URL patterns](#URL patterns)
+  8. [Naming conventions](#Naming conventions)
 
 4. [Documentation](#Documentation)
 5. [Git](#Git)
@@ -171,6 +172,51 @@ urlpatterns = patterns(
      views.CustomerUpdateView.as_view(), name='customer-update'),
 )
 ```
+
+##### Naming conventions
+Avoid names which does not give additional meaning or are unclear. Some
+examples of such names are: Better, Quick, Smart, Clever, Simple, Fast,
+Strange, Stupid.
+
+In general one should not use abbreviations and acronyms unless its known by
+most programmers. Typical examples for known acronyms are: HTTP, HTML, URL.
+
+The following naming conventions should be used to ensure consistency
+throughout all source code. If the names don't make much sense in a given
+context other names should be found. Here are some recommendations:
+
+- For file or directory paths use `path`,
+- For filename without a path use `file`,
+- For directory name without a path use `dir`.
+- Use `load`, `save` for complete operations on the file system, for instance
+  loading an entire `JSON` file.
+- Use `read`, `write` for partial operations of data stream, for instance
+  storing 10 bytes to a file.
+- Use `fetch`, `store` for remote operations, for instance fetching data from a
+  web server or database.
+- When adding elements the following naming should be used:
+  - Use `add` when adding elements without a specific order.
+  - Use `insert` when adding elements in a specific order, for instance at a
+    given index or position.
+  - Use `append` when adding elements to the end.
+  - Use `prepend` when adding elements to the beginning.
+- Use `create` for object creation and `generate` for operations that
+  generate text, code, SQL etc.
+- Use `reset` for resetting elements in the object.
+- When removing elements the following naming should be used:
+  - Use `remove` when elements are no longer referenced but not actually
+    deleted. For instance removing a file path from a list while still leaving
+    the file on the file system.
+  - Use `delete` when elements are no longer meant to exists. For instance
+    unlinking a file from the file system or deleting a database record.
+- Short names are advised when their context is very clear. An example is a
+  copy() function in a File class which has a source and a destination, it is
+  quite clear that in this context we are working with files and can use
+  abbreviated forms, `src` and `dest`.  copy( src, dest ) The order of source
+  and destination is always source first.
+- Some words are different in British English and American English. It is most
+  common to use the American spelling and so all words should follow this.
+  Some typical names are: initialize, finalize, color, grey.
 
 ## Documentation
 - [pep257]
